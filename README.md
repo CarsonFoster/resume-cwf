@@ -17,7 +17,7 @@ Simply put the `resume-cwf.cls` file in the same directory as your source LaTeX 
 - `\linkedin`: Set your LinkedIn, which will be displayed in the contact info header
 - `\makeinfo`: Displays the contact info header; works like `\maketitle` normally
 - `\shortlist`: Takes a variable number of arguments, and formats them into a list on one line
-	- e.g. `\shortlist{Relevant Coursework}{Statistics}{Multivariable Calculus}` becomes *Relevant Coursework: *Statistics, Multivariable Calculus
+	- e.g. `\shortlist{Relevant Coursework}{Statistics}{Multivariable Calculus}` becomes **Relevant Coursework: **Statistics, Multivariable Calculus
 
 ## Environment
 - `rsection`: begins a new main section of the resume. Its argument will be capitalized and bolded.
