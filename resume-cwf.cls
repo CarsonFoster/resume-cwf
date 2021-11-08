@@ -40,8 +40,8 @@
 }
 
 \newcommand{\shortlist}[2]{\textbf{#1:} #2\@checkitemscwf}
-\newcommand{\@checkitemscwf}{\@ifnextchar\bgroup{\@processitemcwf}{\hfill \break}}
-\newcommand{\@processitemcwf}[1]{, #1\@ifnextchar\bgroup{\@processitemcwf}{\hfill \break}} 
+\newcommand{\@checkitemscwf}{\@ifnextchar\bgroup{\@processitemcwf}{}}
+\newcommand{\@processitemcwf}[1]{, #1\@ifnextchar\bgroup{\@processitemcwf}{}} 
 
 \newenvironment{rsection}[1]{%
 	% before rsection
@@ -51,8 +51,7 @@
 	\newcommand{\@to}{}
 	\newenvironment{rsubsection}[2]{%
 		% before rsubsection
-		\noindent {\textbf{##1}, ##2} \hfill {\ifdefempty{\@from}{}{\@from\ifdefempty{\@to}{}{ - \@to}}}%
-
+		\noindent {\textbf{##1}, ##2} \hfill {\ifdefempty{\@from}{}{\@from\ifdefempty{\@to}{}{ - \@to}}}\\
 	}%
 	{%
 		% after rsubsection
@@ -64,6 +63,16 @@
 	% after rsection
 	%\hfill \break
 }
+
+\newenvironment{*itemize}{%
+	\newcommand{\@oldparskip}{\parskip}
+	\setlength{\parskip}{0em}
+	\begin{itemize}
+}%
+{%
+	\setlength{\parskip}{\@oldparskip}
+	\end{itemize}
+}%
 
 \pagestyle{empty} % No page numbers, headers, or footers
 \makeatother

@@ -16,11 +16,12 @@ Simply put the `resume-cwf.cls` file in the same directory as your source LaTeX 
 - `\email`: Set your email address, which will be displayed in the contact info header
 - `\linkedin`: Set your LinkedIn, which will be displayed in the contact info header
 - `\makeinfo`: Displays the contact info header; works like `\maketitle` normally
-- `\shortlist`: Takes a variable number of arguments, and formats them into a list on one line
+- `\shortlist`: Takes a variable number of arguments, and formats them into a list
 	- e.g. `\shortlist{Relevant Coursework}{Statistics}{Multivariable Calculus}` becomes **Relevant Coursework:** Statistics, Multivariable Calculus
 
-## Environment
+## Environments
 - `rsection`: begins a new main section of the resume. Its argument will be capitalized and bolded.
+- `*itemize`: works just like a normal itemize, excepts it suppresses the paragraph spacing beforehand
 
 ### Commands Within `rsection`
 - `\from`: sets the beginning (or only) date for a subsection, which will be right aligned
