@@ -34,7 +34,7 @@
 	\begin{center}%
 		{\namesize \textbf{\@author}}\\
 		\hrulefill\\
-		{\contactsize \ifdefempty{\@website}{}{\@website}\ifdefempty{\@address}{}{\sep\@address}\ifdefempty{\@phone}{}{\sep\@phone}\ifdefempty{\@email}{}{\sep\@email}\ifdefempty{\@linkedin}{}{\sep\@linkedin}}\\
+		{\contactsize \ifdefempty{\@website}{}{\@website}\ifdefempty{\@address}{}{\ifdefempty{\@website}{}{\sep}\@address}\ifdefempty{\@phone}{}{\ifdefempty{\@address}{\ifdefempty{\@website}{}{\sep}}{\sep}\@phone}\ifdefempty{\@email}{}{\ifdefempty{\@phone}{\ifdefempty{\@address}{\ifdefempty{\@website}{}{\sep}}{\sep}}{\sep}\@email}\ifdefempty{\@linkedin}{}{\ifdefempty{\@email}{\ifdefempty{\@phone}{\ifdefempty{\@address}{\ifdefempty{\@website}{}{\sep}}{\sep}}{\sep}}{\sep}\@linkedin}}\\
 		\vspace{5mm}
 	\end{center}%
 }
